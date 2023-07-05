@@ -76,6 +76,66 @@ const iotRoutes = [
             permission: 'iot:product:list'
         },
         component: () => import(/* webpackChunkName:'iot' */'@/views/iot/Product.vue')
+    },
+    {
+        path: 'group',
+        name: 'iot_group',
+        meta: {
+            title: '设备分组',
+            icon: 'el-icon-pie-chart',
+            hidden: true,
+            level: 3,
+            permission: 'iot:group:list'
+        },
+        component: () => import(/* webpackChunkName:'iot' */'@/views/iot/Group.vue')
+    },
+    {
+        path: 'device',
+        name: 'iot_device',
+        meta: {
+            title: '设备管理',
+            icon: 'el-icon-pie-chart',
+            hidden: true,
+            level: 3,
+            permission: 'iot:device:list'
+        },
+        component: () => import(/* webpackChunkName:'iot' */'@/views/iot/Device.vue')
+    },
+    {
+        path: 'alertLog',
+        name: 'iot_alertLog',
+        meta: {
+            title: '设备警告',
+            icon: 'el-icon-pie-chart',
+            hidden: true,
+            level: 3,
+            permission: 'iot:alertLog:list'
+        },
+        component: () => import(/* webpackChunkName:'iot' */'@/views/iot/AlertLog.vue')
+    },
+    {
+        path: 'scene',
+        name: 'iot_scene',
+        meta: {
+            title: '场景联动',
+            icon: 'el-icon-pie-chart',
+            hidden: true,
+            level: 3,
+            permission: 'iot:scene:list'
+        },
+        component: () => import(/* webpackChunkName:'iot' */'@/views/iot/Scene.vue')
+    },
+    {
+        path: 'sip',
+        name: 'iot_sip',
+        meta: {
+            title: '视频配置',
+            icon: 'el-icon-pie-chart',
+            hidden: true,
+            level: 3,
+            permission: 'iot:sip:list'
+        },
+        component: () => import(/* webpackChunkName:'iot' */'@/views/iot/Sip.vue')
     }
 ]
 //运维管理的子集
@@ -130,29 +190,32 @@ const templateRoutes = [
     },
 ]
 // 系统管理的子集
-const systemRoutes = [{
-    path: 'user',
-    name: 'system_user',
-    meta: {
-        title: '用户管理',
-        icon: 'el-icon-user',
-        hidden: true,
-        level: 3,
-        permission: 'system:user:query'
+const systemRoutes = [
+    {
+        path: 'user',
+        name: 'system_user',
+        meta: {
+            title: '用户管理',
+            icon: 'el-icon-user',
+            hidden: true,
+            level: 3,
+            permission: 'system:user:query'
+        },
+        component: () => import(/* webpackChunkName:'system' */'@/views/system/User.vue')
     },
-    component: () => import(/* webpackChunkName:'system' */'@/views/system/User.vue')
-}, {
-    path: 'menu',
-    name: 'system_menu',
-    meta: {
-        title: '菜单管理',
-        icon: 'el-icon-postcard',
-        hidden: true,
-        level: 3,
-        permission: 'system:menu:query'
-    },
-    component: () => import(/* webpackChunkName:'system' */'@/views/system/Menu.vue')
-}]
+    {
+        path: 'menu',
+        name: 'system_menu',
+        meta: {
+            title: '菜单管理',
+            icon: 'el-icon-postcard',
+            hidden: true,
+            level: 3,
+            permission: 'system:menu:query'
+        },
+        component: () => import(/* webpackChunkName:'system' */'@/views/system/Menu.vue')
+    }
+]
 
 /* 二级路由 */
 const childRoutes = [

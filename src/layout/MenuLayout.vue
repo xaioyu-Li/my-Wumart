@@ -33,7 +33,7 @@ export default {
                 <span slot="title">产品管理</span>
             </el-menu-item>
         </el-submenu>
-        
+
         <!-- 运维管理 -->
         <el-submenu index="/template">
             <template slot="title">
@@ -80,6 +80,17 @@ export default {
 .el-menu {
     user-select: none;
     border-right: none;
+
+    .el-submenu {
+        .el-menu-item {
+            background: #1f2d3d !important;
+
+            &:hover {
+                background: #001528 !important;
+            }
+        }
+    }
+
 
     .el-icon-document {
         font-size: 18px;

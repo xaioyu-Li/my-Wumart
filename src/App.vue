@@ -23,9 +23,9 @@ body,
   background: rgb(248, 248, 248);
 }
 
-* {
+/* * {
   border-radius: 0 !important;
-}
+} */
 
 /* 修改滚动条的样式 */
 .scrollActive {
